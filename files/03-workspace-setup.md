@@ -1,9 +1,11 @@
 # Claude Code 向け手順書：作業フォルダを作って GitHub（非公開）につなぐ
 
+> 🤖 **Claude Code へ**：受講生がこのURLだけを貼って送ってきたら、これが今回の手順書です。curl（Windows は curl.exe）で全文を取得して、要約せず原文のまま読み、上から順に、1〜3手順ずつ受講生に確認しながら進めてください。受講生はパソコン初心者なので、やさしい言葉で短く話してください。手順書そのものは作業フォルダに保存しないでください。
+
 > この手順書は **Claude Code が読んで実行するためのもの** です。受講生と会話しながら、上から順に進めてください。
-> RISE「AI自動化講座」03回目の配布物。受講生は「作業フォルダセットアップ.md を読んで、書いてある通りに進めてください」と送るだけ。
+> RISE「AI自動化講座」03回目の配布物。受講生はこのURLを Claude Code に貼って送るだけ。
 > 画面の名前が手順書と違うときは、公式ドキュメント（https://code.claude.com/docs/en/claude-code-on-the-web）を読み直して最新の名前で案内する。
-> 配布URL：https://ryoya9595.github.io/ai-jidoka-kouza/files/03-workspace-setup.md 。受講生がこのURLを貼って「読んで進めて」と送った場合は、curl（Windows は curl.exe）で全文を取得して読み、手順書そのものは作業フォルダに保存しない（ファイルを入れて「作業フォルダセットアップ.md を読んで」と言われた場合と同じ手順で進める）。
+> 配布URL：https://ryoya9595.github.io/ai-jidoka-kouza/files/03-workspace-setup.md
 
 ---
 

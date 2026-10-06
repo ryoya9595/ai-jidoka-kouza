@@ -1,8 +1,9 @@
 # Claude Code 向け手順書：AI動画生成システム（my-short-maker）を入れて、1本作る
 
+> 🤖 **Claude Code へ**：受講生がこのURLだけを貼って送ってきたら、これが今回の手順書です。curl（Windows は curl.exe）で全文を取得して、要約せず原文のまま読み、上から順に、1〜3手順ずつ受講生に確認しながら進めてください。受講生はパソコン初心者なので、やさしい言葉で短く話してください。手順書そのものは作業フォルダに保存しないでください。
+
 > この手順書は **Claude Code が読んで実行するためのもの** です。受講生と会話しながら、上から順に進めてください。
-> RISE「AI自動化講座」18回目の配布物。受講生は、このURL（https://ryoya9595.github.io/ai-jidoka-kouza/files/18-short-maker-setup.md ）を貼って「読んで進めて」と送るだけ。
-> このURLを渡されたら、curl（Windows は curl.exe）で全文を取得して読む。手順書そのものは作業フォルダに保存しない。
+> RISE「AI自動化講座」18回目の配布物。受講生はこのURLを Claude Code に貼って送るだけ。
 > キット本体（解説ページ）：https://ryoya9595.github.io/my-short-maker/
 
 ---

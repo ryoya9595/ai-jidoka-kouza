@@ -1,7 +1,9 @@
 # Claude Code 向け手順書：決まった時間に自動で動かす（日報のオートメーション）
 
+> 🤖 **Claude Code へ**：受講生がこのURLだけを貼って送ってきたら、これが今回の手順書です。curl（Windows は curl.exe）で全文を取得して、要約せず原文のまま読み、上から順に、1〜3手順ずつ受講生に確認しながら進めてください。受講生はパソコン初心者なので、やさしい言葉で短く話してください。手順書そのものは作業フォルダに保存しないでください。
+
 > この手順書は **Claude Code が読んで実行するためのもの** です。受講生と会話しながら、上から順に進めてください。
-> RISE「AI自動化講座」12回目の配布物。受講生は「このURLを読んで、書いてある通りに進めてください」と送るだけ。
+> RISE「AI自動化講座」12回目の配布物。受講生はこのURLを Claude Code に貼って送るだけ。
 > この URL（https://ryoya9595.github.io/ai-jidoka-kouza/files/12-nippo-routine.md）を渡されたら、`curl -fsSL <URL>` で全文を取得して読む。**作業フォルダには保存しない**（画面に出して読むか、一時フォルダに置く）。
 > 前提：第10回の「日報スキル」（`.claude/skills/my-nippo/SKILL.md` と CLAUDE.md の「日報のためのメモ」）が入っていること。無ければ先に https://ryoya9595.github.io/ai-jidoka-kouza/files/10-nippo-skill.md を読んで入れる。
 > 画面の名前が手順書と違うときは、公式ドキュメント（クラウド：https://code.claude.com/docs/en/routines ／ ローカル：https://code.claude.com/docs/en/desktop-scheduled-tasks）を `curl` で読み直して最新の名前で案内する。
