@@ -83,17 +83,20 @@ Claude Code が自分で確認すること：
 
 ---
 
-## フェーズ3：GitHub にログインする
+## フェーズ3：GitHub にログインする（ブラウザだけで終わらせる・ターミナルは使わない）
+
+受講生がやるのは **ブラウザでコードを入れて「Authorize」を押すことだけ**。受講生にターミナル（Windows は PowerShell）を開かせない・コマンドを打たせない。
 
 1. `gh auth status` でログイン済みか確認。済みならユーザー名を控えてフェーズ4へ
-2. 未ログインなら、次のコマンドを **バックグラウンドで** 実行する（入力待ちで止まらないように先頭に `echo |` を付ける）：
-   - Mac：`echo | gh auth login --hostname github.com --git-protocol https --web`
-   - Windows（PowerShell）：`echo "" | gh auth login --hostname github.com --git-protocol https --web`（Claude Code が Git Bash で動いている場合は Mac と同じ書き方）
-3. 出力に出た8文字のコードとURLを受講生に伝える：
+2. 未ログインなら、次のコマンドを **Bash ツールの「バックグラウンド実行（run_in_background）」で** 実行する。普通に実行すると、受講生がブラウザで操作している間に時間切れで止まるので、必ずバックグラウンドで動かす（コマンドはログインが終わるまで待ち続けるのが正常）：
+   - Mac／Windows 共通：`gh auth login --hostname github.com --git-protocol https --web < /dev/null`
+   - Windows で Claude Code が PowerShell で動いている場合：`gh auth login --hostname github.com --git-protocol https --web`（PowerShell のバックグラウンド実行でよい）
+3. 数秒待ってから、バックグラウンドの出力を読んで、8文字のコード（`XXXX-XXXX`）を受講生に伝える：
    > ブラウザで https://github.com/login/device を開いて、次の8文字を入れてください：**XXXX-XXXX**
-   > そのあと緑の「Authorize github」ボタンを押して、「できた」と送ってください。
+   > 「Continue」→ 緑の「Authorize github」ボタンを押して、「できた」と送ってください。
+   - GitHub にまだログインしていないブラウザなら、先に GitHub のログイン画面が出る。メールアドレスとパスワードは受講生が自分で入れる
 4. 「できた」と言われたら `gh auth status` で確認 → `gh auth setup-git` を実行
-5. うまくいかないとき：受講生に「ターミナル」（Windows は PowerShell）を開いてもらい、`gh auth login` を貼り付けて Enter → 質問にはすべて Enter で答えてもらう
+5. うまくいかないとき（コードの期限切れ・「できた」のあとも未ログインのまま・バックグラウンドの処理が終わっていた）：同じコマンドをもう一度 **バックグラウンドで** 実行して、新しいコードを出し直して手順3からやり直す。**ターミナルを開いてもらう方法には切り替えない**
 
 ---
 
