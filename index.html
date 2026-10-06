@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI自動化講座 配布物まとめ</title>
+<meta name="description" content="RISE AI自動化講座の配布物（Claude Codeに読ませるだけの手順書・スキル）を、回ごとにまとめたページ。URLをコピーしてClaude Codeに貼るだけで使えます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .ai-box{border:2px dashed var(--accent);background:#fff;border-radius:16px;padding:20px 24px;margin-top:18px;font-size:.88rem;color:var(--ink-soft)}
+  .ai-box b{color:var(--ink)}
+  .ai-box code{background:var(--paper-2);padding:2px 8px;border-radius:6px;font-size:.8rem;word-break:break-all}
+  .lesson{display:flex;gap:16px;align-items:flex-start}
+  .lesson .no{flex:0 0 52px;height:52px;border-radius:14px;background:var(--accent);color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center}
+  .lesson .body{flex:1;min-width:0}
+  .lesson h3{margin:0 0 6px}
+  .lesson .kind{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:3px 10px;border-radius:999px;background:var(--paper-2);color:var(--ink-soft);margin-left:8px;vertical-align:middle}
+  .lesson .kind.ai{background:var(--green-soft);color:var(--green)}
+  .lesson .kind.human{background:var(--coral-soft);color:var(--coral)}
+  .lesson .kind.ext{background:#eef2ff;color:#4253c7}
+  .lesson p{margin:6px 0 10px;font-size:.9rem;color:var(--ink-soft)}
+  .lesson .prompt-box{margin-top:10px}
+  .lesson .links{font-size:.84rem;margin-top:8px}
+  .lesson .links a{margin-right:14px}
+  .none{color:var(--ink-soft);font-size:.86rem}
+  .part{margin-top:36px}
+  .part h2{font-size:1.15rem;margin:0 0 10px}
+  @media(max-width:640px){.lesson{gap:10px}.lesson .no{flex-basis:40px;height:40px;font-size:.95rem;border-radius:10px}}
+.tip{font-size:14px;line-height:1.6;background:#FFF4EC;border-left:4px solid #E06A3B;padding:8px 12px;border-radius:6px;margin:8px 0}
+.tip code{background:#1C2640;color:#F6F2EA;padding:1px 8px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="./">🤖 AI自動化講座 <span class="brain">配布物まとめ</span></a>
+    <nav class="topnav">
+      <a href="#how">使い方</a>
+      <a href="#part1">全体像</a>
+      <a href="#part2">機能解説</a>
+      <a href="#part3">効率化ツール</a>
+      <a href="#trouble">困ったとき</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-badge accent">RISE AI自動化講座</div>
+  <h1>配布物は、<br><span class="hl">URLを貼るだけ。</span></h1>
+  <p class="lead">各回で使う手順書やスキルを、ここにまとめています。使いたい回の「コピー」を押して、<strong>作業フォルダを開いた Claude Code</strong> に貼り付けて送信するだけ。あとは Claude Code が順番に案内してくれます。</p>
+</header>
+
+<section id="how">
+  <div class="sec-head"><div class="step-num">00</div><h2>使い方 — 3ステップ</h2></div>
+  <div class="card">
+    <ol>
+      <li>Claude Code（デスクトップアプリの「Code」）で、<strong>自分の作業フォルダ</strong>を開く（第3回で作ったフォルダ）</li>
+      <li>下の一覧から、今見ている回の「コピー」を押す</li>
+      <li>Claude Code の入力欄に貼り付けて送信。質問されたら答える。「許可しますか？」が出たら許可する</li>
+    </ol>
+    <div class="note ok"><span class="ico">✅</span><span>手順書はただの文章です。Claude Code が読んで、あなたと会話しながら進めます。<strong>パスワードの入力やアカウント作成は、必ず自分で</strong>ブラウザからやってください（Claude Code に代わりにやらせない）。</span></div>
+  </div>
+  <div class="card" id="plan">
+    <h3>💳 Claude Code を使うのに必要なプラン（最新）</h3>
+    <p>Claude Code は <strong>無料プランでは使えません</strong>。<strong>Pro 以上の有料プラン</strong>が必要です（この講座は Pro で進められます）。料金は変わることがあるので、動画では言っていません。ここが最新の情報です。</p>
+    <ul>
+      <li><strong>Pro</strong>：月20ドル（年払いだと月17ドル相当）。基本これでOK</li>
+      <li><strong>Max</strong>：月100ドル〜。たくさん使って上限にすぐ届く人向け</li>
+      <li>クラウドの自動実行（第12回）やスマホのクラウド版（第13回）も、有料プランで使えます</li>
+    </ul>
+    <p>最新の料金は公式ページで確認 → <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a>（最終確認：2026-10-05）</p>
+    <div class="note ok"><span class="ico">📣</span><span><strong>主流のAIエージェントは時期によって変わります。</strong>大きな変化があれば、このページでお知らせします。この講座は Claude Code を例に解説していますが、Codex など他のAIエージェントでも考え方は同じです。</span></div>
+  </div>
+  <div class="ai-box">
+    🤖 <b>Claude Code へ：</b>このページのURLだけを渡されたら、「AI自動化講座の何回目の配布物を使いたいか」を1問だけ聞いて、該当する手順書のURL（下の一覧の <code>files/…</code>）を curl（Windows は curl.exe）で取得して全文を読み、作業フォルダには保存せず、その手順どおりに、いま開いている作業フォルダで進めてください。何かを作る前には、手順書のとおりユーザーの了承を取ってください。
+  </div>
+</section>
+
+<section id="part1" class="part">
+  <div class="sec-head"><div class="step-num">01</div><h2>全体像（第1〜5回）</h2></div>
+
+  <div class="card lesson" data-no="01">
+    <div class="no">01</div>
+    <div class="body">
+      <h3>AI自動化とは？AIエージェントとは？</h3>
+      <p class="none">配布物なし（この回は動画だけ）。やってみよう：自動化したい作業を1つメモして、アウトプット部屋へ。</p>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="02" data-file="02-first-setup.md" data-mode="help">
+    <div class="no">02</div>
+    <div class="body">
+      <h3>Claude Code のダウンロードと初期設定 <span class="kind human">読む手順書</span></h3>
+      <p>Claudeアカウント・有料プラン・アプリのダウンロード・GitHubアカウント作成・Chrome拡張。自分で読んで進める手順書です。つまずいたら、下のメッセージを Claude Code に貼ると案内してくれます。</p>
+      <p class="tip"><strong>「ローカルセッションにはGitが必要です」と出た方</strong>：Windows は警告の下の「Git for Windows をダウンロード」→全部そのまま「Next」→Claude を完全終了して開き直す。Mac はポップアップの「インストール」を押す。くわしくは手順書の「4」。</p>
+      <div class="links"><a href="files/02-first-setup.md" target="_blank" rel="noopener">📄 手順書を開く</a><a href="https://claude.com/ja/download" target="_blank" rel="noopener">⬇️ Claude アプリのダウンロード</a><a href="https://github.com/signup" target="_blank" rel="noopener">🐙 GitHub アカウント作成</a><a href="https://chromewebstore.google.com/detail/fcoeoabgfenejglbffodgkkbkcdhcgfn" target="_blank" rel="noopener">🌐 Claude in Chrome（Chrome拡張）</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">困ったときに貼るメッセージ</span><button class="copy-btn" data-target="p02">コピー</button></div><div class="prompt-scroll"><pre id="p02"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="03" data-file="03-workspace-setup.md">
+    <div class="no">03</div>
+    <div class="body">
+      <h3>作業フォルダを GitHub につなごう <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>作業フォルダの中身を作って、GitHub の非公開リポジトリに保管し、スマホ・自動実行から使えるようにする。<strong>先に空のフォルダを1つ作って、Claude Code で開いてから</strong>貼ってください。</p>
+      <p class="tip"><strong>Windowsの方</strong>：フォルダを選ぶ画面の上の「場所」の欄をクリックして <code>%USERPROFILE%</code> と入力→Enter で「自分の名前のフォルダ」が開きます（「ホーム」ではありません）。そこに「新しいフォルダー」で作ってください。デスクトップ／ドキュメントは OneDrive が同期しているので避けます。</p>
+      <div class="links"><a href="files/03-workspace-setup.md" target="_blank" rel="noopener">📄 手順書の中身</a><a href="files/03-windows-folder.png" target="_blank" rel="noopener">🖼 Windowsのフォルダ選択画面（図）</a><a href="https://obsidian.md/download" target="_blank" rel="noopener">🗂 Obsidian のダウンロード</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p03">コピー</button></div><div class="prompt-scroll"><pre id="p03"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="04" data-file="04-ai-secretary.md">
+    <div class="no">04</div>
+    <div class="body">
+      <h3>AI秘書を作ろう <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>10問くらいの質問に答えるだけで、自分のことを分かったAI秘書ができる。</p>
+      <div class="links"><a href="files/04-ai-secretary.md" target="_blank" rel="noopener">📄 手順書の中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p04">コピー</button></div><div class="prompt-scroll"><pre id="p04"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="05">
+    <div class="no">05</div>
+    <div class="body">
+      <h3>AIエージェントを使うコツ</h3>
+      <p class="none">配布物なし（この回は動画だけ）。</p>
+    </div>
+  </div>
+</section>
+
+<section id="part2" class="part">
+  <div class="sec-head"><div class="step-num">02</div><h2>機能解説（第6〜15回）</h2></div>
+
+  <div class="card lesson" data-no="06" data-file="06-first-projects.md" data-mode="read">
+    <div class="no">06</div>
+    <div class="body">
+      <h3>まずゲームとHPを作ってみよう <span class="kind human">お題の例</span></h3>
+      <p>そのまま貼れる指示文（ホームページ・ゲーム・自由枠）と、直し方の例文。</p>
+      <div class="links"><a href="files/06-first-projects.md" target="_blank" rel="noopener">📄 お題の例を開く</a></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="07" data-file="07-line-tokuten.md">
+    <div class="no">07</div>
+    <div class="body">
+      <h3>LINE登録者向けの特典を作ってみよう <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>AI秘書にアイデアを5つ出してもらい、1つ選んで、スマホで見やすい1ページ＋PDFにする。</p>
+      <div class="links"><a href="files/07-line-tokuten.md" target="_blank" rel="noopener">📄 手順書の中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p07">コピー</button></div><div class="prompt-scroll"><pre id="p07"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="08" data-file="08-skill-create.md">
+    <div class="no">08</div>
+    <div class="body">
+      <h3>スキル機能で作業を自動化しよう <span class="kind ai">スキルを入れる</span></h3>
+      <p>「スキル作成スキル」を作業フォルダに入れる。入れたあとは <code>/my-skill-create</code> と打つだけで、まず「日頃どんな作業が大変か」を聞いてくれて、そこからスキルを一緒に作ってくれる。作るスキルの名前は必ず <code>my-</code> から始まる。</p>
+      <div class="links"><a href="files/08-skill-create.md" target="_blank" rel="noopener">📄 中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p08">コピー</button></div><div class="prompt-scroll"><pre id="p08"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="09">
+    <div class="no">09</div>
+    <div class="body">
+      <h3>台本作成スキルを使ってみよう <span class="kind ext">会員サイトで配布</span></h3>
+      <p>「あべインスタ台本キット」は会員サイトで配布しているものを使います（このページには置いていません）。キットは<strong>お手本</strong>です。作った台本をそのまま自分の投稿に使わないでください。</p>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="10" data-file="10-nippo-skill.md">
+    <div class="no">10</div>
+    <div class="body">
+      <h3>日報スキルを作ろう <span class="kind ai">スキルを入れる</span></h3>
+      <p>「日報スキル」を入れる。日中はAI秘書が大事なことをメモし、<code>/my-nippo</code> で1日のまとめを作る。第12回で自動化する前段階。</p>
+      <div class="links"><a href="files/10-nippo-skill.md" target="_blank" rel="noopener">📄 中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p10">コピー</button></div><div class="prompt-scroll"><pre id="p10"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="11" data-file="11-kouza-kaisetsu.md">
+    <div class="no">11</div>
+    <div class="body">
+      <h3>自分用の講座解説スキルを作ろう <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>「講座メモ」フォルダを作って、メモをもとに答えてくれるスキルを作る。メモに無いことは「メモにはありません」と答える。</p>
+      <div class="links"><a href="files/11-kouza-kaisetsu.md" target="_blank" rel="noopener">📄 手順書の中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p11">コピー</button></div><div class="prompt-scroll"><pre id="p11"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="12" data-file="12-nippo-routine.md">
+    <div class="no">12</div>
+    <div class="body">
+      <h3>決まった時間に自動で動かそう（オートメーション） <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>第10回の日報スキルを、毎日決まった時間にクラウドで自動実行する。「GitHubの最新を取り込んで」で、自動で作られた日報をパソコンに取り込む。</p>
+      <div class="links"><a href="files/12-nippo-routine.md" target="_blank" rel="noopener">📄 手順書の中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p12">コピー</button></div><div class="prompt-scroll"><pre id="p12"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="13">
+    <div class="no">13</div>
+    <div class="body">
+      <h3>スマホから Claude Code を使おう <span class="kind ext">別ページ</span></h3>
+      <p>手順は専用ページにまとめています。うまくいかないときは、そのページのURLを Claude Code に貼ってください。</p>
+      <div class="links"><a href="https://ryoya9595.github.io/claude-code-mobile/" target="_blank" rel="noopener">📱 スマホから Claude Code を使う（専用ページ）</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p13">コピー</button></div><div class="prompt-scroll"><pre id="p13"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="14">
+    <div class="no">14</div>
+    <div class="body">
+      <h3>AIと声でやり取りしよう</h3>
+      <p class="none">配布物なし（この回は動画だけ）。</p>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="15" data-file="15-mcp-connect.md" data-mode="help">
+    <div class="no">15</div>
+    <div class="body">
+      <h3>MCP連携で外部ツールを動かそう <span class="kind human">読む手順書</span></h3>
+      <p>Googleカレンダーなどの「コネクタ」のつなぎ方と、試しに送る指示文。つまずいたら下のメッセージを貼ると案内してくれます。</p>
+      <div class="links"><a href="files/15-mcp-connect.md" target="_blank" rel="noopener">📄 手順書を開く</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">困ったときに貼るメッセージ</span><button class="copy-btn" data-target="p15">コピー</button></div><div class="prompt-scroll"><pre id="p15"></pre></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="part3" class="part">
+  <div class="sec-head"><div class="step-num">03</div><h2>効率化ツール（第16〜22回）</h2></div>
+
+  <div class="card lesson" data-no="16">
+    <div class="no">16</div>
+    <div class="body">
+      <h3>簡単な指示でツールを作ってみよう <span class="kind ext">別ページ</span></h3>
+      <p>元ネタの「5ステップマニュアル」STEP5 を参考にしてください。お題は文字数カウンターです。</p>
+      <div class="links"><a href="https://ryoya9595.github.io/ai-step-up/" target="_blank" rel="noopener">📘 5ステップマニュアル</a></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="17" data-file="17-shindan-tool.md">
+    <div class="no">17</div>
+    <div class="body">
+      <h3>効率化ツール①：診断ツールを作ろう <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>質問6問・結果4タイプ・最後に公式LINEのボタン。そのままLINE登録の特典になる診断ツールを作る。</p>
+      <div class="links"><a href="files/17-shindan-tool.md" target="_blank" rel="noopener">📄 手順書の中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p17">コピー</button></div><div class="prompt-scroll"><pre id="p17"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="18" data-file="18-short-maker-setup.md">
+    <div class="no">18</div>
+    <div class="body">
+      <h3>効率化ツール②：AI動画生成システム <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>道具の確認→足りないものを入れる→キットを入れる→サンプルで1本作る、まで Claude Code が進める。追加課金なし。</p>
+      <div class="links"><a href="files/18-short-maker-setup.md" target="_blank" rel="noopener">📄 手順書の中身</a> <a href="https://ryoya9595.github.io/my-short-maker/" target="_blank" rel="noopener">🎬 キットの解説ページ</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p18">コピー</button></div><div class="prompt-scroll"><pre id="p18"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="19">
+    <div class="no">19</div>
+    <div class="body">
+      <h3>効率化ツール③：LINE通知システム <span class="kind ext">別ページ</span></h3>
+      <p>LINE通知キットは専用ページにまとめています。ページのURLを Claude Code に貼ると、順番に案内してくれます。<strong>トークンは画面に出さない・ファイルに書かない。</strong></p>
+      <div class="links"><a href="https://ryoya9595.github.io/line-notify-kit/" target="_blank" rel="noopener">🔔 LINE通知キット（専用ページ）</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p19">コピー</button></div><div class="prompt-scroll"><pre id="p19"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="20" data-file="20-publish-url.md">
+    <div class="no">20</div>
+    <div class="body">
+      <h3>作ったツールをURLにしよう <span class="kind ai">Claude Code に読ませる</span></h3>
+      <p>作業フォルダは非公開のまま。公開用のリポジトリを別に作って、ツールだけを GitHub Pages でURLにする。</p>
+      <div class="links"><a href="files/20-publish-url.md" target="_blank" rel="noopener">📄 手順書の中身</a></div>
+      <div class="prompt-box"><div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">Claude Code に貼るメッセージ</span><button class="copy-btn" data-target="p20">コピー</button></div><div class="prompt-scroll"><pre id="p20"></pre></div></div>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="21">
+    <div class="no">21</div>
+    <div class="body">
+      <h3>AIでツールを作るコツ</h3>
+      <p class="none">配布物なし（この回は動画だけ）。</p>
+    </div>
+  </div>
+
+  <div class="card lesson" data-no="22">
+    <div class="no">22</div>
+    <div class="body">
+      <h3>自分のやっていることをAIに頼んで自動化しよう</h3>
+      <p class="none">配布物なし（この回は動画だけ）。ここまでの回で作ったAI秘書・スキル・自動実行を組み合わせて、自分の作業を1つ自動化します。</p>
+    </div>
+  </div>
+</section>
+
+<section id="trouble" class="part">
+  <div class="sec-head"><div class="step-num">04</div><h2>困ったとき</h2></div>
+  <div class="card">
+    <ul>
+      <li><strong>エラーが出た</strong> → エラーの文章をそのまま Claude Code に貼って「どういう意味？」と聞く</li>
+      <li><strong>Claude Code が手順書を読めない</strong> → 「📄 中身」のリンクを開いて、全文をコピーして Claude Code に貼る（ファイルをダウンロードして作業フォルダに入れてもOK）</li>
+      <li><strong>画面の名前が動画と違う</strong> → アップデートで変わることがあります。似た名前のものを探すか、Claude Code に「今の画面で〇〇はどこ？」と聞く</li>
+      <li><strong>それでも解決しない</strong> → 質問部屋へ。やったこと・出たエラー・スクショを添えてください</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-in">
+    <span>🤖 AI自動化講座 配布物まとめ</span>
+    <span>制作：RISE講師 りょうや</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
