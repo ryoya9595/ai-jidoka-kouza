@@ -229,14 +229,18 @@ node_modules/
 
 スマホの Claude アプリ（Code）やクラウドの自動実行（ルーティン）からこのフォルダを使うには、Claude にこのリポジトリを見る許可を出す必要がある。**この1手順を忘れると、あとでスマホからフォルダが選べない。**
 
-1. 受講生に聞いてから、ブラウザで https://claude.ai/code を開く（Mac：`open https://claude.ai/code`／Windows：`start https://claude.ai/code`）
-2. 受講生に案内する：
-   1. Claude のアカウントでログインしていなければログイン（パソコン・スマホと **同じアカウント**）
-   2. 「GitHub と接続」（英語なら **Connect GitHub**）が出たら押す → GitHub の画面で緑の「Authorize」を押す
-   3. 「Claude GitHub App をインストール」の案内が出たら進む（出なければ https://github.com/apps/claude/installations/new を開いてもらう）
-   4. **「Only select repositories」（選んだリポジトリだけ）** を選び、`{リポジトリ名}` を選んで「Install」（すでにインストール済みで「Configure」になっている場合は、そこから `{リポジトリ名}` を追加して「Save」）
+> ⚠️ `https://claude.ai/code` は案内しない・開かない。パソコンに Claude のアプリが入っていると、ブラウザではなくアプリの中で開いて **真っ白な画面** になり、先に進めない。必ず下の GitHub のページを直接開く。
+
+1. 受講生に聞いてから、**GitHub のインストール画面をブラウザで直接開く**：
+   - Mac：`open "https://github.com/apps/claude/installations/new"`
+   - Windows：`start "" "https://github.com/apps/claude/installations/new"`
+2. 受講生に案内する（画面は GitHub）：
+   1. GitHub にログインしていなければログイン（メールアドレスとパスワードは受講生が自分で入れる）
+   2. 「Install & Authorize Claude」の画面で **「Only select repositories」（選んだリポジトリだけ）** を選ぶ
+   3. 「Select repositories」を押して `{リポジトリ名}` を選ぶ
       - 「All repositories」（全部）は選ばない
-   5. 「環境（environment）」を作る画面が出たら、何も変えずに進める
+   4. 緑の **「Install & Authorize」** を押す（すでにインストール済みで「Configure」の画面になった場合は、`{リポジトリ名}` を追加して「Save」）
+   5. Claude の画面に戻って「インストールされました」と出たらOK。Claude のログインを求められたら、パソコン・スマホと **同じアカウント** でログイン
 3. 「できた」を待つ
 
 ---
